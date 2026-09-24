@@ -1,5 +1,8 @@
 Project Title: Phishing Email Analysis & Threat Intelligence Investigation
 
+Executive Summary: 
+Triaged and contained a credential-harvesting phishing attack by analyzing raw .eml headers to mathematically verify spoofing via SPF and DMARC failures. Extracted actionable Indicators of Compromise (IoCs) and formulated immediate network containment and SIEM scoping strategies to neutralize the threat infrastructure.
+
 Scenario:
 A finance employee escalated a suspicious "Overdue Invoice" email to the SOC. The objective was to analyze the raw .eml headers, extract Indicators of Compromise (IoCs), and determine the email's legitimacy and intent.
 
