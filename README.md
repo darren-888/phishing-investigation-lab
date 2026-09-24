@@ -10,17 +10,18 @@ Tools & Environment:
 
 
 ![alt text](images/01-phishing-email.png)
+
 Indicator of Compromise (IoC)
-Sender Email: admin@billing-update-secure-alerts.com
-Source IP: 203.0.113.15
-Malicious URL: http://203.0.113.15/login/portal/secure_login.php?session=88192
+- Sender Email: admin@billing-update-secure-alerts.com
+- Source IP: 203.0.113.15
+- Malicious URL: http://203.0.113.15/login/portal secure_login.php?session=88192
 
 Investigation Findings (TTPs & Observations):
 - Spoofed Identity: The sender display name was altered to "IT Billing Support" to create artificial urgency.
 - Authentication Failure: The email failed SPF checks because the originating IP was not authorized by the domain owner. DKIM signatures were completely absent.
 - Malicious Infrastructure: The domain was registered less than 48 hours prior to the attack, and the originating IP is associated with Bulletproof Hosting in Russia.
 - Automated Tooling: The X-Mailer header revealed the use of a PHP script (PHP/7.4.3) rather than a standard corporate email client.
-![alt text](images/02-IoC-identified.png)
+
 ![alt text](images/03-osint-results.png)
 
 Containment Recommendations:
